@@ -1,0 +1,9 @@
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\bin\Debug\PDI-Talles.exe.config
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI-Talles.csprojResolveAssemblyReference.cache
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI_Talles.Forms.MainWindow.resources
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI_Talles.Properties.Resources.resources
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI-Talles.csproj.GenerateResource.Cache
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\bin\Debug\PDI-Talles.exe
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\bin\Debug\PDI-Talles.pdb
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI-Talles.exe
+c:\users\0152067\documents\visual studio 2015\Projects\PDI-Talles\PDI-Talles\obj\Debug\PDI-Talles.pdb
