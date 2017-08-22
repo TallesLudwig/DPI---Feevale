@@ -1,0 +1,13 @@
+D:\Projetos\PDI\Image Processing\obj\Debug\PDI_Talles.Forms.MainWindow.resources
+D:\Projetos\PDI\Image Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.csproj.GenerateResource.Cache
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.csproj.CoreCompileInputs.cache
+D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.exe
+D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.pdb
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.exe
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.pdb
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.csprojResolveAssemblyReference.cache
+D:\Projetos\PDI\Image Processing\obj\Debug\PDI_Talles.Forms.Histograma.resources
+D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.exe.config
+D:\Projetos\PDI\Image Processing\bin\Debug\System.Windows.Forms.DataVisualization.dll
+D:\Projetos\PDI\Image Processing\bin\Debug\pt-BR\System.Windows.Forms.DataVisualization.resources.dll
