@@ -163,8 +163,7 @@ namespace PDI_Talles.Forms
         private void QuestionE_Click(object sender, EventArgs e)
         {
             HideQuadrants();
-            var img = _fileController.ChangeBiggerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, 0);
-            this.img.Image =_fileController.ChangeLowerValues(img, mainImage.SlicedImg[2].Mediana, 255);
+            this.img.Image =_fileController.ChangeBiggerValuesAndLowerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, mainImage.SlicedImg[2].Mediana, 0, 255);
         }
     }
 }
