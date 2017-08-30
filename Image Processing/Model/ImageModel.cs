@@ -26,7 +26,11 @@ namespace Image_Processing.Model
         public float Variancia { get; set; }
 
         public int Moda { get; set; }
-        
+
+        public int BiggerThan { get; set; }
+
+        public int LessThan { get; set; }
+
         public int[] Histograma = new int[256];
 
         public List<ImageModel> SlicedImg { get; set; }
@@ -50,6 +54,7 @@ namespace Image_Processing.Model
             SetVariancia();
             SetHistograma();
             SetModa();
+            SetQuestionValues();
         }
 
         private void SetMedia()
@@ -109,6 +114,29 @@ namespace Image_Processing.Model
                     Moda = (int)i;
                 }
             }
+        }
+
+        private void SetQuestionValues() //// remover dps de entregar
+        {
+            int less = 0;
+            int more = 0;
+            for (int y = 0; y < Imagem.Height; y++)
+            {
+                for (int x = 0; x < Imagem.Width; x++)
+                {
+                    Color c = Imagem.GetPixel(x, y);
+                    if (c.R < 100) {
+                        less++;
+                    }
+                    if (c.R > 150)
+                    {
+                        more++;
+                    }
+                }
+            }
+
+            BiggerThan = more;
+            LessThan = less;
         }
     }
 }

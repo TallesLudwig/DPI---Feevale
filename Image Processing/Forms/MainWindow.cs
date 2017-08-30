@@ -46,6 +46,7 @@ namespace PDI_Talles.Forms
             this.img1.Image = this.img2.Image = this.img3.Image = this.img4.Image = null;
             this.img.Visible = true;
             this.img1.Visible = this.img2.Visible = this.img3.Visible = this.img4.Visible = false;
+            LabelValuesA(mainImage);
         }
 
         private void Divide(object sender, EventArgs e)
@@ -54,7 +55,8 @@ namespace PDI_Talles.Forms
             this.secondPanel.Visible = true;
             this.img.Visible = false;
             this.img1.Visible = this.img2.Visible = this.img3.Visible = this.img4.Visible = true;
-            this.QuestionA.Enabled = this.QuestionB.Enabled = this.QuestionC.Enabled = this.QuestionD.Enabled = this.QuestionE.Enabled = true;
+            this.QuestionA.Enabled = this.QuestionB.Enabled = this.QuestionC.Enabled = this.QuestionD.Enabled = this.QuestionE.Enabled = 
+                this.QuestionF.Visible = this.QuestionFAnswer.Visible = this.QuestionG.Visible = this.QuestionGAnswer.Visible = true;
 
             _fileController.SliceImg(mainImage);
 
@@ -68,6 +70,8 @@ namespace PDI_Talles.Forms
             imgB.IniImageModel();
             LabelValuesB(imgB);
 
+            this.QuestionFAnswer.Text = (imgA.LessThan + imgB.LessThan).ToString();
+
             var imgC = mainImage.SlicedImg[2];
             this.img3.Image = imgC.Imagem;
             imgC.IniImageModel();
@@ -77,6 +81,8 @@ namespace PDI_Talles.Forms
             this.img4.Image = imgD.Imagem;
             imgD.IniImageModel();
             LabelValuesD(imgD);
+
+            this.QuestionGAnswer.Text = (imgC.BiggerThan + imgD.BiggerThan).ToString();
         }
 
         private void LabelValuesA(ImageModel img)
@@ -163,8 +169,7 @@ namespace PDI_Talles.Forms
         private void QuestionE_Click(object sender, EventArgs e)
         {
             HideQuadrants();
-            var img = _fileController.ChangeBiggerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, 0);
-            this.img.Image =_fileController.ChangeLowerValues(img, mainImage.SlicedImg[2].Mediana, 255);
+            this.img.Image =_fileController.ChangeBiggerValuesAndLowerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, mainImage.SlicedImg[2].Mediana, 0, 255);
         }
     }
 }

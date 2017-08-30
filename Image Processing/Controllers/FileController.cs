@@ -60,6 +60,25 @@ namespace PDI_Talles.Controllers
 
             return novo;
         }
+        
+        public Bitmap ChangeBiggerValuesAndLowerValues(Bitmap imagem, float rulerA, float rulerB, int newValueA, int newValueB)
+        {
+            Bitmap novo = new Bitmap(imagem.Width, imagem.Height);
+            for (Int32 y = 0; y < novo.Height; y++)
+                for (Int32 x = 0; x < novo.Width; x++)
+                {
+                    Color c = imagem.GetPixel(x, y);
+                    int gs = c.R;
+                    if (gs < rulerA)
+                        gs = newValueA;
+                    else if (gs > rulerB)
+                        gs = newValueB;
+                    int trasn = c.A;
+                    novo.SetPixel(x, y, Color.FromArgb(trasn, gs, gs, gs));
+                }
+
+            return novo;
+        }
 
         public void SliceImg(ImageModel original)
         {

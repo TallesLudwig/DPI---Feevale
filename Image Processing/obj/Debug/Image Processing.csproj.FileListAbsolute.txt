@@ -11,3 +11,7 @@ D:\Projetos\PDI\Image Processing\obj\Debug\PDI_Talles.Forms.Histograma.resources
 D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.exe.config
 D:\Projetos\PDI\Image Processing\bin\Debug\System.Windows.Forms.DataVisualization.dll
 D:\Projetos\PDI\Image Processing\bin\Debug\pt-BR\System.Windows.Forms.DataVisualization.resources.dll
+D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.exe.manifest
+D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.application
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.exe.manifest
+D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.application

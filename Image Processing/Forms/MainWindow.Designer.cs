@@ -86,6 +86,10 @@
             this.lblVarianciaA = new System.Windows.Forms.Label();
             this.lblModaA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.QuestionF = new System.Windows.Forms.Label();
+            this.QuestionG = new System.Windows.Forms.Label();
+            this.QuestionFAnswer = new System.Windows.Forms.Label();
+            this.QuestionGAnswer = new System.Windows.Forms.Label();
             this.menuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img1)).BeginInit();
@@ -103,7 +107,7 @@
             this.quadrants});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(763, 24);
+            this.menuStrip3.Size = new System.Drawing.Size(845, 24);
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -147,7 +151,7 @@
             // Dividir
             // 
             this.Dividir.Name = "Dividir";
-            this.Dividir.Size = new System.Drawing.Size(152, 22);
+            this.Dividir.Size = new System.Drawing.Size(129, 22);
             this.Dividir.Text = "Dividir";
             this.Dividir.Click += new System.EventHandler(this.Divide);
             // 
@@ -155,7 +159,7 @@
             // 
             this.QuestionA.Enabled = false;
             this.QuestionA.Name = "QuestionA";
-            this.QuestionA.Size = new System.Drawing.Size(152, 22);
+            this.QuestionA.Size = new System.Drawing.Size(129, 22);
             this.QuestionA.Text = "Questao A";
             this.QuestionA.Click += new System.EventHandler(this.QuestionA_Click);
             // 
@@ -163,7 +167,7 @@
             // 
             this.QuestionB.Enabled = false;
             this.QuestionB.Name = "QuestionB";
-            this.QuestionB.Size = new System.Drawing.Size(152, 22);
+            this.QuestionB.Size = new System.Drawing.Size(129, 22);
             this.QuestionB.Text = "Questao B";
             this.QuestionB.Click += new System.EventHandler(this.QuestionB_Click);
             // 
@@ -171,7 +175,7 @@
             // 
             this.QuestionC.Enabled = false;
             this.QuestionC.Name = "QuestionC";
-            this.QuestionC.Size = new System.Drawing.Size(152, 22);
+            this.QuestionC.Size = new System.Drawing.Size(129, 22);
             this.QuestionC.Text = "Questao C";
             this.QuestionC.Click += new System.EventHandler(this.QuestionC_Click);
             // 
@@ -179,7 +183,7 @@
             // 
             this.QuestionD.Enabled = false;
             this.QuestionD.Name = "QuestionD";
-            this.QuestionD.Size = new System.Drawing.Size(152, 22);
+            this.QuestionD.Size = new System.Drawing.Size(129, 22);
             this.QuestionD.Text = "Questao D";
             this.QuestionD.Click += new System.EventHandler(this.QuestionD_Click);
             // 
@@ -187,7 +191,7 @@
             // 
             this.QuestionE.Enabled = false;
             this.QuestionE.Name = "QuestionE";
-            this.QuestionE.Size = new System.Drawing.Size(152, 22);
+            this.QuestionE.Size = new System.Drawing.Size(129, 22);
             this.QuestionE.Text = "Questao E";
             this.QuestionE.Click += new System.EventHandler(this.QuestionE_Click);
             // 
@@ -778,9 +782,55 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Variância:";
             // 
+            // QuestionF
+            // 
+            this.QuestionF.AutoSize = true;
+            this.QuestionF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionF.Location = new System.Drawing.Point(758, 270);
+            this.QuestionF.Name = "QuestionF";
+            this.QuestionF.Size = new System.Drawing.Size(43, 13);
+            this.QuestionF.TabIndex = 7;
+            this.QuestionF.Text = "< 100:";
+            this.QuestionF.Visible = false;
+            // 
+            // QuestionG
+            // 
+            this.QuestionG.AutoSize = true;
+            this.QuestionG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionG.Location = new System.Drawing.Point(758, 283);
+            this.QuestionG.Name = "QuestionG";
+            this.QuestionG.Size = new System.Drawing.Size(43, 13);
+            this.QuestionG.TabIndex = 8;
+            this.QuestionG.Text = "> 150:";
+            this.QuestionG.Visible = false;
+            // 
+            // QuestionFAnswer
+            // 
+            this.QuestionFAnswer.AutoSize = true;
+            this.QuestionFAnswer.Location = new System.Drawing.Point(798, 270);
+            this.QuestionFAnswer.Name = "QuestionFAnswer";
+            this.QuestionFAnswer.Size = new System.Drawing.Size(35, 13);
+            this.QuestionFAnswer.TabIndex = 9;
+            this.QuestionFAnswer.Text = "label6";
+            this.QuestionFAnswer.Visible = false;
+            // 
+            // QuestionGAnswer
+            // 
+            this.QuestionGAnswer.AutoSize = true;
+            this.QuestionGAnswer.Location = new System.Drawing.Point(798, 283);
+            this.QuestionGAnswer.Name = "QuestionGAnswer";
+            this.QuestionGAnswer.Size = new System.Drawing.Size(35, 13);
+            this.QuestionGAnswer.TabIndex = 10;
+            this.QuestionGAnswer.Text = "label8";
+            this.QuestionGAnswer.Visible = false;
+            // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(763, 564);
+            this.ClientSize = new System.Drawing.Size(845, 564);
+            this.Controls.Add(this.QuestionGAnswer);
+            this.Controls.Add(this.QuestionFAnswer);
+            this.Controls.Add(this.QuestionG);
+            this.Controls.Add(this.QuestionF);
             this.Controls.Add(this.panelActions);
             this.Controls.Add(this.img2);
             this.Controls.Add(this.img4);
@@ -866,5 +916,9 @@
         private System.Windows.Forms.ToolStripMenuItem QuestionC;
         private System.Windows.Forms.ToolStripMenuItem QuestionD;
         private System.Windows.Forms.ToolStripMenuItem QuestionE;
+        private System.Windows.Forms.Label QuestionF;
+        private System.Windows.Forms.Label QuestionG;
+        private System.Windows.Forms.Label QuestionFAnswer;
+        private System.Windows.Forms.Label QuestionGAnswer;
     }
 }
