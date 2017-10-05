@@ -1,4 +1,6 @@
-﻿using Image_Processing.Model;
+﻿using Image_Processing.Controllers;
+using Image_Processing.Forms;
+using Image_Processing.Model;
 using PDI_Talles.Controllers;
 using System;
 using System.Windows.Forms;
@@ -8,6 +10,7 @@ namespace PDI_Talles.Forms
     public partial class MainWindow : Form
     {
         FileController _fileController = new FileController();
+        FunctionsController _functionsController = new FunctionsController();
         ImageModel mainImage;
 
         public MainWindow()
@@ -28,7 +31,9 @@ namespace PDI_Talles.Forms
                 LabelValuesA(mainImage);
 
                 this.panelActions.Enabled = true;
-                this.quadrants.Visible = true;
+                this.originalImage.Enabled = true;
+                this.funçoesToolStripMenuItem.Visible = true;
+                this.filtros.Visible = true;
                 originalImage.Visible = true;
             }
         }
@@ -36,53 +41,6 @@ namespace PDI_Talles.Forms
         private void GetOriginalImage(object sender, EventArgs e)
         {
             this.img.Image = _fileController.GetOriginalImage();
-            HideQuadrants();
-        }
-
-        private void HideQuadrants()
-        {
-            this.labelA.Text = "Foto";
-            this.secondPanel.Visible = false;
-            this.img1.Image = this.img2.Image = this.img3.Image = this.img4.Image = null;
-            this.img.Visible = true;
-            this.img1.Visible = this.img2.Visible = this.img3.Visible = this.img4.Visible = false;
-            LabelValuesA(mainImage);
-        }
-
-        private void Divide(object sender, EventArgs e)
-        {
-            this.labelA.Text = "Quatrante A";
-            this.secondPanel.Visible = true;
-            this.img.Visible = false;
-            this.img1.Visible = this.img2.Visible = this.img3.Visible = this.img4.Visible = true;
-            this.QuestionA.Enabled = this.QuestionB.Enabled = this.QuestionC.Enabled = this.QuestionD.Enabled = this.QuestionE.Enabled = 
-                this.QuestionF.Visible = this.QuestionFAnswer.Visible = this.QuestionG.Visible = this.QuestionGAnswer.Visible = true;
-
-            _fileController.SliceImg(mainImage);
-
-            var imgA = mainImage.SlicedImg[0];
-            this.img1.Image = imgA.Imagem;
-            imgA.IniImageModel();
-            LabelValuesA(imgA);
-
-            var imgB = mainImage.SlicedImg[1];
-            this.img2.Image = imgB.Imagem;
-            imgB.IniImageModel();
-            LabelValuesB(imgB);
-
-            this.QuestionFAnswer.Text = (imgA.LessThan + imgB.LessThan).ToString();
-
-            var imgC = mainImage.SlicedImg[2];
-            this.img3.Image = imgC.Imagem;
-            imgC.IniImageModel();
-            LabelValuesC(imgC);
-
-            var imgD = mainImage.SlicedImg[3];
-            this.img4.Image = imgD.Imagem;
-            imgD.IniImageModel();
-            LabelValuesD(imgD);
-
-            this.QuestionGAnswer.Text = (imgC.BiggerThan + imgD.BiggerThan).ToString();
         }
 
         private void LabelValuesA(ImageModel img)
@@ -93,83 +51,64 @@ namespace PDI_Talles.Forms
             this.lblModaA.Text = img.Moda.ToString();
         }
 
-        private void HistogramA(object sender, EventArgs e)
+        private void Histogram(object sender, EventArgs e)
         {
-            var histA = this.secondPanel.Visible ? mainImage.SlicedImg[0] : mainImage;
-            Histograma h = new Histograma(histA.Histograma);
+            Histograma h = new Histograma(mainImage.Histograma);
             h.Show();
         }
-
-        private void LabelValuesB(ImageModel img)
+        private void HorizontaMirroring_Click(object sender, EventArgs e)
         {
-            this.lblMediaB.Text = img.Media.ToString();
-            this.lblMedianaB.Text = img.Mediana.ToString();
-            this.lblVarianciaB.Text = img.Variancia.ToString();
-            this.lblModaB.Text = img.Moda.ToString();
+            this.img.Image = _functionsController.HorizontaMirroring(mainImage.Imagem);
         }
 
-        private void HistogramB(object sender, EventArgs e)
+        private void VerticalMirroring_Click(object sender, EventArgs e)
         {
-            Histograma h = new Histograma(mainImage.SlicedImg[1].Histograma);
-            h.Show();
+            this.img.Image = _functionsController.VerticalMirroring(mainImage.Imagem);
         }
 
-        private void LabelValuesC(ImageModel img)
+        private void RotateAnticlockwise_Click(object sender, EventArgs e)
         {
-            this.lblMediaC.Text = img.Media.ToString();
-            this.lblMedianaC.Text = img.Mediana.ToString();
-            this.lblVarianciaC.Text = img.Variancia.ToString();
-            this.lblModaC.Text = img.Moda.ToString();
+            this.img.Image = _functionsController.RotateAnticlockwise(90, mainImage.Imagem);
         }
 
-        private void HistogramC(object sender, EventArgs e)
+        private void RotateClockwise_Click(object sender, EventArgs e)
         {
-            Histograma h = new Histograma(mainImage.SlicedImg[2].Histograma);
-            h.Show();
+            this.img.Image = _functionsController.RotateClockwise(90, mainImage.Imagem);
         }
 
-        private void LabelValuesD(ImageModel img)
+        private void reduzirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.lblMediaD.Text = img.Media.ToString();
-            this.lblMedianaD.Text = img.Mediana.ToString();
-            this.lblVarianciaD.Text = img.Variancia.ToString();
-            this.lblModaD.Text = img.Moda.ToString();
+            this.img.Image = _functionsController.Shrink(mainImage.Imagem);
         }
 
-        private void HistogramD(object sender, EventArgs e)
+        private void dobroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Histograma h = new Histograma(mainImage.SlicedImg[3].Histograma);
-            h.Show();
+            this.img.Image = _functionsController.Stretch(mainImage.Imagem);
         }
 
-        private void QuestionA_Click(object sender, EventArgs e)
+        private void thresholdingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideQuadrants();
-            this.img.Image = _fileController.ChangeBiggerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, 255);
+            ThresholdingScale thresholdingScale = new ThresholdingScale(this, mainImage);
+            thresholdingScale.Show();
         }
 
-        private void QuestionB_Click(object sender, EventArgs e)
+        private void gausToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideQuadrants();
-            this.img.Image = _fileController.ChangeBiggerValues(mainImage.Imagem, mainImage.SlicedImg[3].Moda, 200);
+            Gaus gaus = new Gaus(mainImage);
+            this.img.Image = gaus.RunGaus();
         }
 
-        private void QuestionC_Click(object sender, EventArgs e)
+        private void sobelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideQuadrants();
-            this.img.Image = _fileController.ChangeBiggerValues(mainImage.Imagem, mainImage.SlicedImg[2].Mediana, 220);
+            Sobel s = new Sobel();
+            this.img.Image = s.Executar(mainImage.Imagem);
         }
 
-        private void QuestionD_Click(object sender, EventArgs e)
+        private void prewittToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideQuadrants();
-            this.img.Image = _fileController.ChangeLowerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, 100);
+            Prewitt p = new Prewitt();
+            this.img.Image = p.Executar(mainImage.Imagem);
         }
 
-        private void QuestionE_Click(object sender, EventArgs e)
-        {
-            HideQuadrants();
-            this.img.Image =_fileController.ChangeBiggerValuesAndLowerValues(mainImage.Imagem, mainImage.SlicedImg[1].Media, mainImage.SlicedImg[2].Mediana, 0, 255);
-        }
     }
 }

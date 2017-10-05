@@ -33,8 +33,6 @@ namespace Image_Processing.Model
 
         public int[] Histograma = new int[256];
 
-        public List<ImageModel> SlicedImg { get; set; }
-
         public void IniImageModel()
         {
             Bitmap grayScale = new Bitmap(Imagem.Width, Imagem.Height);

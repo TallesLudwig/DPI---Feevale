@@ -60,7 +60,7 @@ namespace PDI_Talles.Controllers
 
             return novo;
         }
-        
+
         public Bitmap ChangeBiggerValuesAndLowerValues(Bitmap imagem, float rulerA, float rulerB, int newValueA, int newValueB)
         {
             Bitmap novo = new Bitmap(imagem.Width, imagem.Height);
@@ -78,30 +78,6 @@ namespace PDI_Talles.Controllers
                 }
 
             return novo;
-        }
-
-        public void SliceImg(ImageModel original)
-        {
-            var slicedImg = new List<ImageModel>();            
-
-            Rectangle rect = new Rectangle(0, 0, original.Imagem.Width / 2, original.Imagem.Height / 2);
-            Bitmap i1 = original.Imagem.Clone(rect, original.Imagem.PixelFormat);
-            var teste = new ImageModel(i1);
-            slicedImg.Add(teste);
-
-            rect = new Rectangle(original.Imagem.Width / 2, 0, original.Imagem.Width / 2, original.Imagem.Height / 2);
-            Bitmap i2 = original.Imagem.Clone(rect, original.Imagem.PixelFormat);
-            slicedImg.Add(new ImageModel(i2));
-
-            rect = new Rectangle(0, original.Imagem.Height / 2, original.Imagem.Width, original.Imagem.Height / 2);
-            Bitmap i3 = original.Imagem.Clone(rect, original.Imagem.PixelFormat);
-            slicedImg.Add(new ImageModel(i3));
-
-            rect = new Rectangle(original.Imagem.Width / 2, original.Imagem.Height / 2, original.Imagem.Width / 2, original.Imagem.Height / 2);
-            Bitmap i4 = original.Imagem.Clone(rect, original.Imagem.PixelFormat);
-            slicedImg.Add(new ImageModel(i4));
-
-            original.SlicedImg = slicedImg;
         }
     }
 }

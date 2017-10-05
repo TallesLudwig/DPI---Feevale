@@ -15,3 +15,52 @@ D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.exe.manifest
 D:\Projetos\PDI\Image Processing\bin\Debug\Image Processing.application
 D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.exe.manifest
 D:\Projetos\PDI\Image Processing\obj\Debug\Image Processing.application
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.exe.config
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.exe
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.pdb
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.exe
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.pdb
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\pt-BR\System.Windows.Forms.DataVisualization.resources.dll
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.csprojResolveAssemblyReference.cache
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\PDI_Talles.Forms.Histograma.resources
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\PDI_Talles.Forms.MainWindow.resources
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.csproj.GenerateResource.Cache
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.exe.manifest
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.application
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.exe.manifest
+C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.application
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.csprojResolveAssemblyReference.cache
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\PDI_Talles.Forms.Histograma.resources
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\PDI_Talles.Forms.MainWindow.resources
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image_Processing.Forms.ThresholdingScale.resources
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.csproj.GenerateResource.Cache
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\Image Processing.exe.config
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\Image Processing.exe.manifest
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\Image Processing.application
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\Image Processing.exe
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\Image Processing.pdb
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\bin\Debug\pt-BR\System.Windows.Forms.DataVisualization.resources.dll
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.exe.manifest
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.application
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.exe
+C:\Users\0152067\Desktop\Trabalho 2 - Talles - Arquivos\Image Processing\obj\Debug\Image Processing.pdb
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\Image Processing.exe.config
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.exe
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.pdb
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\PDI_Talles.Forms.Histograma.resources
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\PDI_Talles.Forms.MainWindow.resources
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image_Processing.Forms.ThresholdingScale.resources
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.csproj.GenerateResource.Cache
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\Image Processing.exe.manifest
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\Image Processing.application
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\Image Processing.exe
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\Image Processing.pdb
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\pt-BR\System.Windows.Forms.DataVisualization.resources.dll
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.exe.manifest
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.application

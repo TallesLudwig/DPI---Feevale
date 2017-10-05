@@ -11,7 +11,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\CLIENTE\Desktop\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\0152067\Desktop\Nova pasta\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -21,9 +22,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -48,16 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F7AC689965D8330A9FD5FD8A50B241AF07D5C651</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>Image Processing_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,7 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FileController.cs" />
-    <Compile Include="Controllers\Program.cs" />
+    <Compile Include="Controllers\FunctionsController.cs" />
+    <Compile Include="Controllers\Filters\GausController.cs" />
+    <Compile Include="Controllers\Filters\LimiarizationController.cs" />
+    <Compile Include="Controllers\Filters\Borders\PrewittController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Controllers\Filters\Borders\SobelController.cs" />
     <Compile Include="Forms\Histograma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +85,12 @@
     <Compile Include="Forms\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThresholdingScale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThresholdingScale.Designer.cs">
+      <DependentUpon>ThresholdingScale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Histograma.resx">
@@ -96,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThresholdingScale.resx">
+      <DependentUpon>ThresholdingScale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,7 +113,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="Image Processing_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
