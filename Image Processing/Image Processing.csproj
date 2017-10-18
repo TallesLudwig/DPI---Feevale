@@ -73,6 +73,12 @@
     <Compile Include="Controllers\Filters\Borders\PrewittController.cs" />
     <Compile Include="Controllers\Morphology\Dilation.cs" />
     <Compile Include="Controllers\Morphology\Erosion.cs" />
+    <Compile Include="Forms\Element.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Element.Designer.cs">
+      <DependentUpon>Element.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Controllers\Filters\Borders\SobelController.cs" />
     <Compile Include="Forms\Histograma.cs">
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="Model\ImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Element.resx">
+      <DependentUpon>Element.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Histograma.resx">
       <DependentUpon>Histograma.cs</DependentUpon>
     </EmbeddedResource>

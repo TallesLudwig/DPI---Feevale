@@ -62,6 +62,7 @@ namespace PDI_Talles.Forms
             Histogram h = new Histogram(mainImage.Histograma);
             h.Show();
         }
+
         private void HorizontaMirroring_Click(object sender, EventArgs e)
         {
             this.img.Image = _functionsController.HorizontaMirroring(mainImage.Imagem);
@@ -118,14 +119,28 @@ namespace PDI_Talles.Forms
 
         private void Dilation_Click(object sender, EventArgs e)
         {
-            Bitmap currentIgm = (Bitmap)this.img.Image;
-            this.img.Image = _dilationController.Run(currentIgm);
+            Element elementWindow = new Element();
+            var result = elementWindow.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var element = elementWindow.element;
+                Bitmap currentIgm = (Bitmap)this.img.Image;
+                this.img.Image = _dilationController.Run(currentIgm, element);
+            }
         }
 
         private void Erosion_Click(object sender, EventArgs e)
         {
-            Bitmap currentIgm = (Bitmap)this.img.Image;
-            this.img.Image = _erosionController.Run(currentIgm);
+            Element elementWindow = new Element();
+            var result = elementWindow.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var element = elementWindow.element;
+                Bitmap currentIgm = (Bitmap)this.img.Image;
+                this.img.Image = _erosionController.Run(currentIgm, element);
+            }
         }
     }
 }

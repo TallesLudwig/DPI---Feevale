@@ -8,12 +8,7 @@ namespace Image_Processing.Controllers.Morphology
 {
     class Dilation
     {
-        private static int[,] element = new int[,]
-        {{ 0, 10, 0 },
-        { 10, 10, 10 },
-        { 0, 10, 0 }};
-
-        public Image Run(Bitmap image)
+        public Image Run(Bitmap image, int[,] element)
         {
             Bitmap result = (Bitmap)image.Clone();
             int widthM1 = image.Width - 1;
