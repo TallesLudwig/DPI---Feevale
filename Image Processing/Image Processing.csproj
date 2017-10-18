@@ -71,6 +71,8 @@
     <Compile Include="Controllers\Filters\GausController.cs" />
     <Compile Include="Controllers\Filters\LimiarizationController.cs" />
     <Compile Include="Controllers\Filters\Borders\PrewittController.cs" />
+    <Compile Include="Controllers\Morphology\Dilation.cs" />
+    <Compile Include="Controllers\Morphology\Erosion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controllers\Filters\Borders\SobelController.cs" />
     <Compile Include="Forms\Histograma.cs">

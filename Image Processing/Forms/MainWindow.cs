@@ -1,8 +1,10 @@
 ﻿using Image_Processing.Controllers;
+using Image_Processing.Controllers.Morphology;
 using Image_Processing.Forms;
 using Image_Processing.Model;
 using PDI_Talles.Controllers;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PDI_Talles.Forms
@@ -11,6 +13,9 @@ namespace PDI_Talles.Forms
     {
         FileController _fileController = new FileController();
         FunctionsController _functionsController = new FunctionsController();
+        Dilation _dilationController = new Dilation();
+        Erosion _erosionController = new Erosion();
+
         ImageModel mainImage;
 
         public MainWindow()
@@ -34,6 +39,7 @@ namespace PDI_Talles.Forms
                 this.originalImage.Enabled = true;
                 this.funçoesToolStripMenuItem.Visible = true;
                 this.filtros.Visible = true;
+                this.morphology.Visible = true;
                 originalImage.Visible = true;
             }
         }
@@ -53,7 +59,7 @@ namespace PDI_Talles.Forms
 
         private void Histogram(object sender, EventArgs e)
         {
-            Histograma h = new Histograma(mainImage.Histograma);
+            Histogram h = new Histogram(mainImage.Histograma);
             h.Show();
         }
         private void HorizontaMirroring_Click(object sender, EventArgs e)
@@ -76,39 +82,50 @@ namespace PDI_Talles.Forms
             this.img.Image = _functionsController.RotateClockwise(90, mainImage.Imagem);
         }
 
-        private void reduzirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Shrink_Click(object sender, EventArgs e)
         {
             this.img.Image = _functionsController.Shrink(mainImage.Imagem);
         }
 
-        private void dobroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Stretch_Click(object sender, EventArgs e)
         {
             this.img.Image = _functionsController.Stretch(mainImage.Imagem);
         }
 
-        private void thresholdingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThresholdingScale_Click(object sender, EventArgs e)
         {
             ThresholdingScale thresholdingScale = new ThresholdingScale(this, mainImage);
             thresholdingScale.Show();
         }
 
-        private void gausToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Gaus_Click(object sender, EventArgs e)
         {
             Gaus gaus = new Gaus(mainImage);
             this.img.Image = gaus.RunGaus();
         }
 
-        private void sobelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Sobel_Click(object sender, EventArgs e)
         {
             Sobel s = new Sobel();
             this.img.Image = s.Executar(mainImage.Imagem);
         }
 
-        private void prewittToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Prewitt_Click(object sender, EventArgs e)
         {
             Prewitt p = new Prewitt();
             this.img.Image = p.Executar(mainImage.Imagem);
         }
 
+        private void Dilation_Click(object sender, EventArgs e)
+        {
+            Bitmap currentIgm = (Bitmap)this.img.Image;
+            this.img.Image = _dilationController.Run(currentIgm);
+        }
+
+        private void Erosion_Click(object sender, EventArgs e)
+        {
+            Bitmap currentIgm = (Bitmap)this.img.Image;
+            this.img.Image = _erosionController.Run(currentIgm);
+        }
     }
 }

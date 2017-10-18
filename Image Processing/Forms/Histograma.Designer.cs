@@ -1,6 +1,6 @@
 ﻿namespace PDI_Talles.Forms
 {
-    partial class Histograma
+    partial class Histogram
     {
         /// <summary>
         /// Required designer variable.

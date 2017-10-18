@@ -46,6 +46,9 @@
             this.gausToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prewittToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.morphology = new System.Windows.Forms.ToolStripMenuItem();
+            this.dilataçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.erosãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.img = new System.Windows.Forms.PictureBox();
             this.panelActions = new System.Windows.Forms.Panel();
             this.labelA = new System.Windows.Forms.Label();
@@ -68,7 +71,8 @@
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.funçoesToolStripMenuItem,
-            this.filtros});
+            this.filtros,
+            this.morphology});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(778, 24);
@@ -162,14 +166,14 @@
             this.reduzirToolStripMenuItem.Name = "reduzirToolStripMenuItem";
             this.reduzirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.reduzirToolStripMenuItem.Text = "Reduzir Metade";
-            this.reduzirToolStripMenuItem.Click += new System.EventHandler(this.reduzirToolStripMenuItem_Click);
+            this.reduzirToolStripMenuItem.Click += new System.EventHandler(this.Shrink_Click);
             // 
             // dobroToolStripMenuItem
             // 
             this.dobroToolStripMenuItem.Name = "dobroToolStripMenuItem";
             this.dobroToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.dobroToolStripMenuItem.Text = "Dobro";
-            this.dobroToolStripMenuItem.Click += new System.EventHandler(this.dobroToolStripMenuItem_Click);
+            this.dobroToolStripMenuItem.Click += new System.EventHandler(this.Stretch_Click);
             // 
             // filtros
             // 
@@ -188,28 +192,52 @@
             this.thresholdingToolStripMenuItem.Name = "thresholdingToolStripMenuItem";
             this.thresholdingToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.thresholdingToolStripMenuItem.Text = "Thresholding";
-            this.thresholdingToolStripMenuItem.Click += new System.EventHandler(this.thresholdingToolStripMenuItem_Click);
+            this.thresholdingToolStripMenuItem.Click += new System.EventHandler(this.ThresholdingScale_Click);
             // 
             // gausToolStripMenuItem
             // 
             this.gausToolStripMenuItem.Name = "gausToolStripMenuItem";
             this.gausToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.gausToolStripMenuItem.Text = "Gaus";
-            this.gausToolStripMenuItem.Click += new System.EventHandler(this.gausToolStripMenuItem_Click);
+            this.gausToolStripMenuItem.Click += new System.EventHandler(this.Gaus_Click);
             // 
             // sobelToolStripMenuItem
             // 
             this.sobelToolStripMenuItem.Name = "sobelToolStripMenuItem";
             this.sobelToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.sobelToolStripMenuItem.Text = "Sobel";
-            this.sobelToolStripMenuItem.Click += new System.EventHandler(this.sobelToolStripMenuItem_Click);
+            this.sobelToolStripMenuItem.Click += new System.EventHandler(this.Sobel_Click);
             // 
             // prewittToolStripMenuItem
             // 
             this.prewittToolStripMenuItem.Name = "prewittToolStripMenuItem";
             this.prewittToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.prewittToolStripMenuItem.Text = "Prewitt";
-            this.prewittToolStripMenuItem.Click += new System.EventHandler(this.prewittToolStripMenuItem_Click);
+            this.prewittToolStripMenuItem.Click += new System.EventHandler(this.Prewitt_Click);
+            // 
+            // morphology
+            // 
+            this.morphology.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dilataçãoToolStripMenuItem,
+            this.erosãoToolStripMenuItem});
+            this.morphology.Name = "morphology";
+            this.morphology.Size = new System.Drawing.Size(78, 20);
+            this.morphology.Text = "Morfologia";
+            this.morphology.Visible = false;
+            // 
+            // dilataçãoToolStripMenuItem
+            // 
+            this.dilataçãoToolStripMenuItem.Name = "dilataçãoToolStripMenuItem";
+            this.dilataçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dilataçãoToolStripMenuItem.Text = "Dilatação";
+            this.dilataçãoToolStripMenuItem.Click += new System.EventHandler(this.Dilation_Click);
+            // 
+            // erosãoToolStripMenuItem
+            // 
+            this.erosãoToolStripMenuItem.Name = "erosãoToolStripMenuItem";
+            this.erosãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.erosãoToolStripMenuItem.Text = "Erosão";
+            this.erosãoToolStripMenuItem.Click += new System.EventHandler(this.Erosion_Click);
             // 
             // img
             // 
@@ -386,5 +414,8 @@
         private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prewittToolStripMenuItem;
         public System.Windows.Forms.PictureBox img;
+        private System.Windows.Forms.ToolStripMenuItem morphology;
+        private System.Windows.Forms.ToolStripMenuItem dilataçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem erosãoToolStripMenuItem;
     }
 }

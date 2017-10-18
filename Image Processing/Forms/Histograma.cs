@@ -10,18 +10,17 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PDI_Talles.Forms
 {
-    public partial class Histograma : Form
+    public partial class Histogram : Form
     {
-        int[] histograma;
-        public Histograma(int[] histograma)
+        int[] histogram;
+        public Histogram(int[] histogram)
         {
-            this.histograma = histograma;
+            this.histogram = histogram;
             InitializeComponent();
         }
 
         private void Histograma_Load(object sender, EventArgs e)
         {
-
             this.chartHistograma.Series.Clear();
             this.chartHistograma.Series.Add("Valores");
             // Add series.
@@ -32,7 +31,7 @@ namespace PDI_Talles.Forms
                 //this.chartHistograma.ChartAreas[0].AxisX.MaximumAutoSize = 100;
                 this.chartHistograma.Series["Valores"].IsVisibleInLegend = false;
 
-                this.chartHistograma.Series["Valores"].Points.AddXY(i, histograma[i]);             
+                this.chartHistograma.Series["Valores"].Points.AddXY(i, histogram[i]);
             }
         }
 
