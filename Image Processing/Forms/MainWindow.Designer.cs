@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -228,14 +229,14 @@
             // dilataçãoToolStripMenuItem
             // 
             this.dilataçãoToolStripMenuItem.Name = "dilataçãoToolStripMenuItem";
-            this.dilataçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dilataçãoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.dilataçãoToolStripMenuItem.Text = "Dilatação";
             this.dilataçãoToolStripMenuItem.Click += new System.EventHandler(this.Dilation_Click);
             // 
             // erosãoToolStripMenuItem
             // 
             this.erosãoToolStripMenuItem.Name = "erosãoToolStripMenuItem";
-            this.erosãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.erosãoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.erosãoToolStripMenuItem.Text = "Erosão";
             this.erosãoToolStripMenuItem.Click += new System.EventHandler(this.Erosion_Click);
             // 
@@ -370,6 +371,7 @@
             this.Controls.Add(this.panelActions);
             this.Controls.Add(this.img);
             this.Controls.Add(this.menuStrip3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip3;
             this.Name = "MainWindow";
             this.menuStrip3.ResumeLayout(false);

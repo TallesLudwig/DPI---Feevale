@@ -7,14 +7,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Image Processing.exe.manifest" size="4205">
+    <dependentAssembly dependencyType="install" codebase="Image Processing.exe.manifest" size="4659">
       <assemblyIdentity name="Image Processing.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yOcXHJL9Jn7DkWgRoLOD++swkP8=</dsig:DigestValue>
+        <dsig:DigestValue>Bp0uHM/45NQlf6dQsy6b+J98Ta0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

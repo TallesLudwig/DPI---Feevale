@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Histogram));
             this.chartHistograma = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chartHistograma)).BeginInit();
             this.SuspendLayout();
@@ -51,13 +52,14 @@
             this.chartHistograma.Size = new System.Drawing.Size(880, 280);
             this.chartHistograma.TabIndex = 0;
             // 
-            // Histograma
+            // Histogram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 308);
             this.Controls.Add(this.chartHistograma);
-            this.Name = "Histograma";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Histogram";
             this.Text = "Histograma";
             this.Load += new System.EventHandler(this.Histograma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartHistograma)).EndInit();
