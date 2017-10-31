@@ -62,6 +62,7 @@
             this.lblVarianciaA = new System.Windows.Forms.Label();
             this.lblModaA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.holtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.panelActions.SuspendLayout();
@@ -220,7 +221,8 @@
             // 
             this.morphology.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dilataçãoToolStripMenuItem,
-            this.erosãoToolStripMenuItem});
+            this.erosãoToolStripMenuItem,
+            this.holtToolStripMenuItem});
             this.morphology.Name = "morphology";
             this.morphology.Size = new System.Drawing.Size(78, 20);
             this.morphology.Text = "Morfologia";
@@ -229,14 +231,14 @@
             // dilataçãoToolStripMenuItem
             // 
             this.dilataçãoToolStripMenuItem.Name = "dilataçãoToolStripMenuItem";
-            this.dilataçãoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.dilataçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dilataçãoToolStripMenuItem.Text = "Dilatação";
             this.dilataçãoToolStripMenuItem.Click += new System.EventHandler(this.Dilation_Click);
             // 
             // erosãoToolStripMenuItem
             // 
             this.erosãoToolStripMenuItem.Name = "erosãoToolStripMenuItem";
-            this.erosãoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.erosãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.erosãoToolStripMenuItem.Text = "Erosão";
             this.erosãoToolStripMenuItem.Click += new System.EventHandler(this.Erosion_Click);
             // 
@@ -365,6 +367,13 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Variância:";
             // 
+            // holtToolStripMenuItem
+            // 
+            this.holtToolStripMenuItem.Name = "holtToolStripMenuItem";
+            this.holtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.holtToolStripMenuItem.Text = "Holt";
+            this.holtToolStripMenuItem.Click += new System.EventHandler(this.holtToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(778, 564);
@@ -419,5 +428,6 @@
         private System.Windows.Forms.ToolStripMenuItem morphology;
         private System.Windows.Forms.ToolStripMenuItem dilataçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem erosãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem holtToolStripMenuItem;
     }
 }

@@ -66,3 +66,4 @@ C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Pr
 C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.application
 C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.exe
 C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.pdb
+C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.csprojResolveAssemblyReference.cache

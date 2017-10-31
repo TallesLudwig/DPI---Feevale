@@ -15,6 +15,7 @@ namespace PDI_Talles.Forms
         FunctionsController _functionsController = new FunctionsController();
         Dilation _dilationController = new Dilation();
         Erosion _erosionController = new Erosion();
+        Holt _holtController = new Holt();
 
         ImageModel mainImage;
 
@@ -141,6 +142,12 @@ namespace PDI_Talles.Forms
                 Bitmap currentIgm = (Bitmap)this.img.Image;
                 this.img.Image = _erosionController.Run(currentIgm, element);
             }
+        }
+
+        private void holtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap currentIgm = (Bitmap)this.img.Image;
+            this.img.Image = _holtController.Run(mainImage.Imagem);
         }
     }
 }

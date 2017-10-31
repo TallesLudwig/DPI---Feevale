@@ -79,6 +79,7 @@
     <Compile Include="Controllers\Filters\Borders\PrewittController.cs" />
     <Compile Include="Controllers\Morphology\Dilation.cs" />
     <Compile Include="Controllers\Morphology\Erosion.cs" />
+    <Compile Include="Controllers\Morphology\Holt.cs" />
     <Compile Include="Forms\Element.cs">
       <SubType>Form</SubType>
     </Compile>
