@@ -120,18 +120,29 @@ namespace PDI_Talles.Forms
 
         private void Dilation_Click(object sender, EventArgs e)
         {
-            Element elementWindow = new Element();
-            var result = elementWindow.ShowDialog();
-
-            if (result == DialogResult.OK)
+            if (mainImage.Media < 128)
             {
-                var element = elementWindow.element;
-                Bitmap currentIgm = (Bitmap)this.img.Image;
-                this.img.Image = _dilationController.Run(currentIgm, element);
+                Erosion();
+            }
+            else
+            {
+                Dilation();
             }
         }
 
         private void Erosion_Click(object sender, EventArgs e)
+        {
+            if (mainImage.Media < 128)
+            {
+                Dilation();
+            }
+            else
+            {
+                Erosion();
+            }
+        }
+
+        private void Erosion()
         {
             Element elementWindow = new Element();
             var result = elementWindow.ShowDialog();
@@ -144,10 +155,23 @@ namespace PDI_Talles.Forms
             }
         }
 
+        private void Dilation()
+        {
+            Element elementWindow = new Element();
+            var result = elementWindow.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var element = elementWindow.element;
+                Bitmap currentIgm = (Bitmap)this.img.Image;
+                this.img.Image = _dilationController.Run(currentIgm, element);
+            }
+        }
+
         private void holtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Bitmap currentIgm = (Bitmap)this.img.Image;
-            this.img.Image = _holtController.Run(mainImage.Imagem);
+            this.img.Image = _holtController.Run(currentIgm);
         }
     }
 }

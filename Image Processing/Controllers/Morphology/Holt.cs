@@ -141,6 +141,55 @@ namespace Image_Processing.Controllers.Morphology
                 toRemove.Clear();
             }
 
+            for (int y = 1; y < heightM1; y++)
+            {
+                for (int x = 1; x < widthM1; x++)
+                {
+                    Color pixel = result.GetPixel(x, y);
+                    var value = pixel.R;
+
+                    if (value == 0)
+                    {
+                        pixel = result.GetPixel(x + 1, y);
+                        var L = pixel.R == 0;
+
+                        pixel = result.GetPixel(x, y + 1);
+                        var S = pixel.R == 0;
+
+                        pixel = result.GetPixel(x, y - 1);
+                        var N = pixel.R == 0;
+
+                        pixel = result.GetPixel(x - 1, y);
+                        var O = pixel.R == 0;
+
+                        pixel = result.GetPixel(x + 1, y - 1);
+                        var NL = pixel.R == 0;
+
+                        pixel = result.GetPixel(x - 1, y - 1);
+                        var NO = pixel.R == 0;
+
+                        pixel = result.GetPixel(x + 1, y + 1);
+                        var SL = pixel.R == 0;
+
+                        pixel = result.GetPixel(x - 1, y + 1);
+                        var SO= pixel.R == 0;
+                        
+                        if (!(N && ((L && !NL && !SO && (!O || !S) || (O && !NO && !SL && (!L || !S))))) == false)
+                        {
+                            // O pixel deve ser removido...
+                            result.SetPixel(x, y, Color.White);
+                            continue;
+                        }
+                        if (!(S && ((L && !NL && !SO && (!O || !N) || (O && !NO && !SL && (!L || !N))))) == false)
+                        {
+                            // O pixel deve ser removido...
+                            result.SetPixel(x, y, Color.White);
+
+                        }
+                    }
+                }
+            }
+
             return result;
         }
 
