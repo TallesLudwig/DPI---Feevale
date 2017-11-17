@@ -30,7 +30,7 @@ namespace Image_Processing.Controllers.Morphology
             }
             var no_pixels_deleted = false;
 
-            var toRemove = new List<Ponto>();
+            var toRemove = new List<Point>();
             while (no_pixels_deleted == false)
             {
                 no_pixels_deleted = true;
@@ -67,10 +67,10 @@ namespace Image_Processing.Controllers.Morphology
                             {
                                 // O pixel deve ser removido...
                                 no_pixels_deleted = false;
-                                Ponto ponto = new Ponto
+                                Point ponto = new Point
                                 {
-                                    x = x,
-                                    y = y
+                                    X = x,
+                                    Y = y
                                 };
 
                                 toRemove.Add(ponto);
@@ -86,7 +86,7 @@ namespace Image_Processing.Controllers.Morphology
 
                 foreach (var pixel in toRemove)
                 {
-                    result.SetPixel(pixel.x, pixel.y, Color.White);
+                    result.SetPixel(pixel.X, pixel.Y, Color.White);
                 }
                 toRemove.Clear();
 
@@ -122,10 +122,10 @@ namespace Image_Processing.Controllers.Morphology
                             {
                                 // O pixel deve ser removido...
                                 no_pixels_deleted = false;
-                                Ponto ponto = new Ponto
+                                Point ponto = new Point
                                 {
-                                    x = x,
-                                    y = y
+                                    X = x,
+                                    Y = y
                                 };
 
                                 toRemove.Add(ponto);
@@ -136,7 +136,7 @@ namespace Image_Processing.Controllers.Morphology
 
                 foreach (var pixel in toRemove)
                 {
-                    result.SetPixel(pixel.x, pixel.y, Color.White);
+                    result.SetPixel(pixel.X, pixel.Y, Color.White);
                 }
                 toRemove.Clear();
             }
@@ -275,12 +275,5 @@ namespace Image_Processing.Controllers.Morphology
             return conectividade == 1 ? true : false;
         }
 
-    }
-
-    public class Ponto
-    {
-        public int x { get; set; }
-
-        public int y { get; set; }
     }
 }

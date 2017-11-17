@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -57,6 +57,8 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -70,8 +72,11 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Extraction\CircleExtractionController.cs" />
+    <Compile Include="Controllers\Extraction\SquareExtractionController.cs" />
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\FunctionsController.cs" />
     <Compile Include="Controllers\Filters\GausController.cs" />
@@ -86,6 +91,8 @@
     <Compile Include="Forms\Element.Designer.cs">
       <DependentUpon>Element.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Circle.cs" />
+    <Compile Include="Model\Square.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controllers\Filters\Borders\SobelController.cs" />
     <Compile Include="Forms\Histograma.cs">
