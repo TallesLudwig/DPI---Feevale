@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using Image_Processing.Model;
 
 namespace Image_Processing.Controllers.Extraction
 {
     public class CircleExtractionController
     {
+        readonly CommonController _commonController = new CommonController();
         public List<Circle> Circles = new List<Circle>();
         private Stack<Color> Colors = new Stack<Color>();
 
@@ -41,7 +40,7 @@ namespace Image_Processing.Controllers.Extraction
             int width = image.Width - 1;
             int height = image.Height - 1;
 
-            ToBlackWhite(ref image, width, height);
+            _commonController.ToBlackWhite(ref image, width, height);
 
             for (int y = 1; y < height; y++)
             {
@@ -56,7 +55,7 @@ namespace Image_Processing.Controllers.Extraction
             foreach (var c in Circles)
             {
                 IdentifyingCircles(image, c, width, height);
-                FloodFill(ref image, c, Color.White, Colors.Pop());
+                _commonController.FloodFillCircle(ref image, c, Color.White, Colors.Pop());
             }
 
                 return image;
@@ -161,53 +160,6 @@ namespace Image_Processing.Controllers.Extraction
 
         #endregion
 
-        #region Foodfill
 
-        private void FloodFill(ref Bitmap bmp, Circle circle, Color targetColor, Color replacementColor)
-        {
-            Stack<Point> pixels = new Stack<Point>();
-            targetColor = bmp.GetPixel(circle.Center.X, circle.Center.Y);
-            pixels.Push(circle.Center);
-            circle.Color = replacementColor;
-
-            while (pixels.Count > 0)
-            {
-                Point a = pixels.Pop();
-                if (a.X < bmp.Width && a.X > 0 && a.Y < bmp.Height && a.Y > 0)//make sure we stay within bounds
-                {
-
-                    if (bmp.GetPixel(a.X, a.Y) == targetColor)
-                    {
-                        circle.AreaByPixel++;
-                        bmp.SetPixel(a.X, a.Y, replacementColor);
-                        pixels.Push(new Point(a.X - 1, a.Y));
-                        pixels.Push(new Point(a.X + 1, a.Y));
-                        pixels.Push(new Point(a.X, a.Y - 1));
-                        pixels.Push(new Point(a.X, a.Y + 1));
-                    }
-                }
-            }
-            return;
-        }
-
-        #endregion
-
-        private void ToBlackWhite(ref Bitmap result, int width, int height)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var p = result.GetPixel(x, y);
-                    int a = p.A;
-                    int r = p.R;
-                    int g = p.G;
-                    int b = p.B;
-                    int avg = (r + g + b) / 3;
-                    avg = avg < 128 ? 0 : 255;     // Converting gray pixels to either pure black or pure white
-                    result.SetPixel(x, y, Color.FromArgb(a, avg, avg, avg));
-                }
-            }
-        }
     }
 }

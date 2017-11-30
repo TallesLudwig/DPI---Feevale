@@ -100,6 +100,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Circulo1 = new System.Windows.Forms.Label();
+            this.placaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.panelActions.SuspendLayout();
@@ -115,7 +116,8 @@
             this.funçoesToolStripMenuItem,
             this.filtros,
             this.morphology,
-            this.extraçãoDeCaracterísticasToolStripMenuItem});
+            this.extraçãoDeCaracterísticasToolStripMenuItem,
+            this.placaToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(778, 24);
@@ -795,6 +797,13 @@
             this.Circulo1.TabIndex = 76;
             this.Circulo1.Text = "Circulo1";
             // 
+            // placaToolStripMenuItem
+            // 
+            this.placaToolStripMenuItem.Name = "placaToolStripMenuItem";
+            this.placaToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.placaToolStripMenuItem.Text = "Placa";
+            this.placaToolStripMenuItem.Click += new System.EventHandler(this.placaToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(778, 564);
@@ -895,5 +904,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label Circulo1;
+        private System.Windows.Forms.ToolStripMenuItem placaToolStripMenuItem;
     }
 }

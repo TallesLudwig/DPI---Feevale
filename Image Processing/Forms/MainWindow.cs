@@ -20,6 +20,7 @@ namespace PDI_Talles.Forms
         Holt _holtController = new Holt();
         SquareExtractionController _squareExtractionController = new SquareExtractionController();
         CircleExtractionController _circleExtractionController = new CircleExtractionController();
+        PlateRecognitionController _plateRecognitionController = new PlateRecognitionController();
 
         ImageModel mainImage;
 
@@ -101,7 +102,7 @@ namespace PDI_Talles.Forms
 
         private void ThresholdingScale_Click(object sender, EventArgs e)
         {
-            ThresholdingScale thresholdingScale = new ThresholdingScale(this, mainImage);
+            ThresholdingScale thresholdingScale = new ThresholdingScale(this, (Bitmap)this.img.Image);
             thresholdingScale.Show();
         }
 
@@ -211,5 +212,29 @@ namespace PDI_Talles.Forms
             this.circlePanel.Visible = true;
         }
 
+        private void placaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gaus gaus = new Gaus(mainImage);
+            Limiarization limiarizacao = new Limiarization();
+            this.img.Image = limiarizacao.Run(190, gaus.RunGaus());
+            Bitmap pic = (Bitmap)this.img.Image;
+
+            for (int y = 0; (y <= (pic.Height - 1)); y++)
+            {
+                for (int x = 0; (x <= (pic.Width - 1)); x++)
+                {
+                    Color inv = pic.GetPixel(x, y);
+                    inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+                    pic.SetPixel(x, y, inv);
+                }
+            }
+            /*Sobel s = new Sobel();
+            pic = (Bitmap)s.Executar(pic);*/
+            this.img.Image = _plateRecognitionController.FloodByArea(pic);
+
+            /*;*/
+
+            //// Todo Floodfild
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace Image_Processing.Controllers.Extraction
     public class SquareExtractionController
     {
         private List<Square> Squares = new List<Square>();
+        readonly CommonController _commonController = new CommonController();
 
         #region Masks
 
@@ -62,7 +63,7 @@ namespace Image_Processing.Controllers.Extraction
             int width = image.Width - 1;
             int height = image.Height - 1;
 
-            ToBlackWhite(ref image, width, height);
+            _commonController.ToBlackWhite(ref image, width, height);
 
             for (int y = 1; y < height; y++)
             {
@@ -132,22 +133,5 @@ namespace Image_Processing.Controllers.Extraction
         }
         #endregion
         
-        private void ToBlackWhite(ref Bitmap result, int width, int height)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var p = result.GetPixel(x, y);
-                    int a = p.A;
-                    int r = p.R;
-                    int g = p.G;
-                    int b = p.B;
-                    int avg = (r + g + b) / 3;
-                    avg = avg < 128 ? 0 : 255;     // Converting gray pixels to either pure black or pure white
-                    result.SetPixel(x, y, Color.FromArgb(a, avg, avg, avg));
-                }
-            }
-        }
     }
 }

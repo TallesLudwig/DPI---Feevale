@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Image_Processing.Controllers;
 using PDI_Talles.Forms;
 using Image_Processing.Model;
+using System.Drawing;
 
 namespace Image_Processing.Forms
 {
@@ -15,6 +16,13 @@ namespace Image_Processing.Forms
         {
             this.mainWindow = main;
             this.mainImage = mainImage;
+            InitializeComponent();
+        }
+
+        public ThresholdingScale(MainWindow main, Bitmap mainImage)
+        {
+            this.mainWindow = main;
+            this.mainImage = new ImageModel(mainImage);
             InitializeComponent();
         }
 

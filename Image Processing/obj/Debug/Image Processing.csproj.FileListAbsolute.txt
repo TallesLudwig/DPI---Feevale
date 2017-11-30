@@ -68,15 +68,6 @@ C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Pr
 C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\obj\Debug\Image Processing.csprojResolveAssemblyReference.cache
 C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\Image_Processing.Forms.Element.resources
 C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\obj\Debug\PDI_Talles.Forms.Histogram.resources
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.dll
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.Imaging.dll
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.Math.dll
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.xml
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.Imaging.xml
-C:\Users\0152067\Desktop\PDI-Feevale-master\Image Processing\bin\Debug\AForge.Math.xml
-C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\AForge.xml
-C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\AForge.Imaging.xml
-C:\Users\talles.strack\Documents\Feevale\PDI\Image Processing\bin\Debug\AForge.Math.xml
 C:\Users\0152067\Desktop\PDI-Feevale-master (1)\PDI-Feevale-master\Image Processing\bin\Debug\Image Processing.exe.config
 C:\Users\0152067\Desktop\PDI-Feevale-master (1)\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.exe
 C:\Users\0152067\Desktop\PDI-Feevale-master (1)\PDI-Feevale-master\Image Processing\obj\Debug\Image Processing.pdb
